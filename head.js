@@ -6,6 +6,11 @@ const assertEqual = function(actual, expected) {
   }
 };
 
+/**
+ * Outpout the value at index 0 of a given array
+ * @param {array} dataArray - Input an array to find its head
+ * @returns {*} Value at index 0 of the imput array
+ */
 const head = function(dataArray) {
   return dataArray[0];
 };
