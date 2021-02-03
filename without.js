@@ -63,16 +63,18 @@ const assertEqual = function(actual, expected) {
  * present in the itemsToRemove array
  */
 const without = (arrayToEdit, itemsToRemove) => {
+  // Create a copy of the original array
+  let copyArrayToEdit = [...arrayToEdit];
   // Loop through all the items of itemsToRemove
   for (let itemToRemove of itemsToRemove) {
     // While the itemToRemove exists in the arrayToEdit
-    while (arrayToEdit.includes(itemToRemove)) {
+    while (copyArrayToEdit.includes(itemToRemove)) {
       // Splice (remove) one iteration of the item from arrayToEdit
-      arrayToEdit.splice(arrayToEdit.indexOf(itemToRemove), 1);
+      copyArrayToEdit.splice(copyArrayToEdit.indexOf(itemToRemove), 1);
     }
   }
-  // Return the edited arrayToEdit
-  return arrayToEdit;
+  // Return the edited copy of arrayToEdit
+  return copyArrayToEdit;
 };
 
 // TEST
