@@ -63,7 +63,7 @@ const eqObjects = (object1, object2) => {
 };
 
 /**
- * Compare two objects and print out if they match or not
+ * This function compares two objects and print out if they match or not
  * @param {*} actual Enter the object to test
  * @param {*} expected Enter the expected object
  */
