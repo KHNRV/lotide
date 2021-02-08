@@ -175,7 +175,7 @@ provided returns a truthy value.
 | array | <code>array</code> | 
 | callback | <code>callback</code> | 
 
-## without(arrayToEdit, itemsToRemove) ⇒ <code>array</code>
+### without(arrayToEdit, itemsToRemove) ⇒ <code>array</code>
 This function take in a source array and a itemsToRemove array. It return a
 new array with only those elements from source that are not present in the
 itemsToRemove array.
