@@ -28,6 +28,8 @@ const findKeyByValue = (objectToSearch, valueToFind) => {
   }
 };
 
+module.exports = findKeyByValue;
+
 //TEST
 const bestTVShowsByGenre = {
   // eslint-disable-next-line camelcase

@@ -18,6 +18,8 @@ const findKey = (object, callback) => {
   }
 };
 
+module.exports = findKey;
+
 // ASSERTION FUNCTIONS
 /**
  * Compare two value and print out if they match or not

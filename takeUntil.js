@@ -20,6 +20,8 @@ const takeUntil = (array, callback) => {
   }
 };
 
+module.exports = takeUntil;
+
 // TEST FUNCTIONS
 /**
  * Function that takes in two arrays and returns true or false, based on a

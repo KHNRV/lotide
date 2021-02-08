@@ -38,6 +38,8 @@ const countLetters = (stringToCount) => {
   return letterCount;
 };
 
+module.exports = countLetters;
+
 assertEqual(countLetters("lighthouse in the house").l, 1);
 assertEqual(countLetters("lighthouse in the house").i, 2);
 assertEqual(countLetters("lighthouse in the house").g, 1);

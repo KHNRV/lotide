@@ -57,6 +57,8 @@ const map = (arr, callback) => {
   return mapedArray;
 };
 
+module.exports = map;
+
 // TEST 1
 const words1 = ["ground", "control", "to", "major", "tom"];
 const results1 = map(words1, (word) => word[0]);
