@@ -1,4 +1,3 @@
-// FUNCTION IMPLEMENTATION
 /**
  * Compare two value and print out if they match or not
  * @param {*} actual - Enter the variable to test
@@ -12,9 +11,5 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-// TEST CODE
-assertEqual("Lighthouse Labs", "Bootcamp");
-assertEqual(1, 1);
-assertEqual("I'm a twin string", "I'm a twin string");
-assertEqual("I'm a string", "I'm another string");
-assertEqual(1, 4);
+// EXPORT assertEqual
+module.exports = assertEqual;
