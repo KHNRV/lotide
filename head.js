@@ -1,5 +1,3 @@
-const assertEqual = require("./assertEqual");
-
 /**
  * Output the value at index 0 of a given array
  * @param {array} inputArray - Input an array to find its head

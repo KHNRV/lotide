@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
-  "version": "1.0.0",
-  "description": "",
+  "name": "@khnrv/lotide",
+  "version": "1.0.3",
+  "description": "A mini clone of the Lodash library.",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/KHNRV/lotide.git"
   },
-  "author": "",
+  "author": "Kevin Nicolas (KHNRV)",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/KHNRV/lotide/issues"
@@ -22,5 +22,6 @@
   "devDependencies": {
     "chai": "^4.3.0",
     "mocha": "^8.2.1"
-  }
+  },
+  "dependencies": {}
 }
