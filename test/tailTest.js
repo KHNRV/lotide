@@ -1,22 +1,24 @@
-const assertEqual = require("../assertEqual");
 const tail = require("../tail");
+const assert = require("chai").assert;
 
-// Test Case 1: Check the returned array elements
-const resultTest1 = tail(["Hello", "Lighthouse", "Labs"]);
-assertEqual(resultTest1.length, 2); // ensure we get back two elements
-assertEqual(resultTest1[0], "Lighthouse"); // ensure first element is "Lighthouse"
-assertEqual(resultTest1[1], "Labs"); // ensure second element is "Labs"
-
-// Test Case 2 : Check the original array
-const wordsTest2 = ["Yo Yo", "Lighthouse", "Labs"];
-tail(wordsTest2); // no need to capture the return value since we are not checking it
-assertEqual(wordsTest2.length, 3); // original array should still have 3 elements!
-
-// Test Case 3 : An array with only one element should yield an empty array for
-//its tail
-const wordsTest3 = ["Alone"];
-assertEqual(tail(wordsTest3).length, 0);
-
-// Test Case 4 : An empty array should yield an empty array for its tail
-const wordsTest4 = [];
-assertEqual(tail(wordsTest4).length, 0);
+describe("tail.js", () => {
+  it(`returns ["Lighthouse", "Labs"] for ["Hello", "Lighthouse", "Labs"]`, () => {
+    assert.deepEqual(tail(["Hello", "Lighthouse", "Labs"]), [
+      "Lighthouse",
+      "Labs",
+    ]);
+  });
+  it(`the function does not edit the source array`, () => {
+    const wordsTest2 = ["Yo Yo", "Lighthouse", "Labs"];
+    tail(wordsTest2); // no need to capture the return value since we are not checking it
+    assert.deepEqual(wordsTest2, ["Yo Yo", "Lighthouse", "Labs"]);
+  });
+  it(`returns [] when given an array with only one element`, () => {
+    const wordsTest3 = ["Alone"];
+    assert.deepEqual(tail(wordsTest3), []);
+  });
+  it(`returns an empty array when given an empty array`, () => {
+    const wordsTest4 = [];
+    assert.deepEqual(tail(wordsTest4), []);
+  });
+});
